@@ -7,13 +7,21 @@ gem 'rails', '4.1.5'
 group :development, :test do
 	gem 'sqlite3'
 	gem 'rspec-rails'
+	gem 'guard-rspec'
+	gem 'spork-rails'
+	gem 'guard-spork'
+	gem 'childprocess'
 end
 group :production do
 	gem 'pg'
 	gem 'rails_12factor'
 end
 
-gem 'capybara'
+group :test do
+	gem 'capybara'
+	gem 'selenium-webdriver'
+end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
