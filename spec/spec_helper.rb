@@ -47,6 +47,7 @@ Spork.prefork do
     #     --seed 1234
     config.order = "random"
     config.include Capybara::DSL
+    config.include Rails.application.routes.url_helpers
   end
 end
   # Loading more in this block will cause your tests to run faster. However,
