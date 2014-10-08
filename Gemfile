@@ -10,7 +10,6 @@ gem 'rails', '4.1.5'
 group :development, :test do
 	gem 'sqlite3'
 	gem 'rspec-rails'
-	gem 'guard-rspec'
 	gem 'spork-rails'
 	gem 'guard-spork'
 	gem 'childprocess'
