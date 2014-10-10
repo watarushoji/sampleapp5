@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'bootstrap-sass'
-gem 'sprockets'
+
+gem 'bootstrap-sass', '2.3.2.0'
+gem 'sprockets', '2.11.0'
 gem 'bcrypt-ruby'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -22,6 +23,7 @@ end
 group :test do
 	gem 'capybara'
 	gem 'selenium-webdriver'
+	gem 'factory_girl_rails'
 end
 
 # Use SCSS for stylesheets
