@@ -1,11 +1,8 @@
 <% provide(:title, 'Sign up') %>
-<div class="left">
-	<p>Sign up</p>
-</div>
-
+<h1>Sign up</h1>
 <div class="container">
 	<div class="row">
-		<div class="col-xs-6">
+		<div class="span6 offset3">
 			<%= form_for(@user) do |f| %>
 			<%= render 'shared/error_messages' %>
 
