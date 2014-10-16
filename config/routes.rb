@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
   
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers #/users/1/following, /users/1/followers を following_user_path, followers_user_pathとする。followingはfollowed_usersであるはずだが、名前が不細工なのでfollowingに変更。。
+    end
+  end
+
+  resources :users #←削除すべきなの？
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
 
   root :to => 'static_pages#home'
   match '/signup', to: 'users#new', via: 'get'
